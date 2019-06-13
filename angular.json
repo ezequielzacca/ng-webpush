@@ -24,7 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/push.js"
             ],
             "styles": [
               "src/styles.sass"
@@ -118,6 +119,47 @@
           }
         }
       }
-    }},
+    },
+    "ng-webpush": {
+      "projectType": "library",
+      "root": "projects/ng-webpush",
+      "sourceRoot": "projects/ng-webpush/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-webpush/tsconfig.lib.json",
+            "project": "projects/ng-webpush/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-webpush/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-webpush/src/test.ts",
+            "tsConfig": "projects/ng-webpush/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-webpush/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-webpush/tsconfig.lib.json",
+              "projects/ng-webpush/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "pwa-web-push"
 }
