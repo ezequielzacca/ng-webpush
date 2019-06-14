@@ -1,6 +1,6 @@
 importScripts("https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/6.1.1/firebase-messaging.js");
-importScripts("assets/js/idb.js");
+importScripts("https://cdn.jsdelivr.net/npm/idb@3.0.2/build/idb.js");
 
 function registerFirebase(firebaseConfig) {
     console.log("register firebase called");

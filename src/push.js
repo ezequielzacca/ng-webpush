@@ -1,4 +1,4 @@
-importScripts("assets/js/sw-push-handler.js");
+importScripts("https://cdn.jsdelivr.net/gh/ezequielzacca/ng-webpush/src/assets/js/sw-push-handler.js");
 
 registerFirebase({
     apiKey: "AIzaSyDFSX53LTDBPM-SO4kINDMjAy9R1MB2GWE",
