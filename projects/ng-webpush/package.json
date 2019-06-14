@@ -1,6 +1,6 @@
 {
   "name": "ng-webpush",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/ezequielzacca/ng-webpush"
@@ -9,5 +9,12 @@
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
     "idb": "^3.0.2"
-  }
+  },
+  "keywords": [
+    "angular",
+    "fcm",
+    "web push",
+    "push notifications",
+    "serviceworker"
+  ]
 }
