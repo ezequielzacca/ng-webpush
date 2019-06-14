@@ -1,6 +1,6 @@
 {
   "name": "ng-webpush",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/ezequielzacca/ng-webpush"
@@ -16,5 +16,6 @@
     "web push",
     "push notifications",
     "serviceworker"
-  ]
+  ],
+  "license" : "MIT"
 }

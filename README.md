@@ -12,7 +12,7 @@ With NgWebPush your app will be able to
 
 It works both for `mobile` and `desktop`
 
-Unfortunately and due to IOS currently not supporting the Web Push Standard, it doesnt work on IOS, but hopefully it will work soon
+Unfortunately and due to IOS currently not supporting the Web Push Standard, it doesn't work on IOS, but hopefully it will work soon
 
 ## Goal
 
