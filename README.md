@@ -28,7 +28,7 @@ As a first step, in order to send and receive push notifications with firebase, 
 - Click the Settings icon, then select Project settings.
 - In the bottom section of the General tab, you will see your config object wich looks like this:
 
-```
+```typescript
 var firebaseConfig = {
   apiKey: "api-key",
   authDomain: "project-id.firebaseapp.com",
@@ -48,7 +48,7 @@ Run the following command to add `sw-precache` to your app
 
 Once installed you need to create a file called `sw-precache-config.js` in your root folder with the following content:
 
-```
+```typescript
 module.exports = {
     root: "dist/{{name of your project}}",
     stripPrefix: "dist/{{name of your project}}",
@@ -59,7 +59,7 @@ module.exports = {
 
 Then you need to create a file called `push.js` inside your `src` folder wich will call the serviceworker service provided by NgWebPush that provides all the serviceworker related logic for handling and displaying push notification while your app is on the foreground or while its closed, inside `push.js` add the following content (remember to use your firebase config values):
 
-```
+```typescript
 importScripts("https://cdn.jsdelivr.net/gh/ezequielzacca/ng-webpush/src/assets/js/sw-push-handler.js");
 
 registerFirebase({
@@ -75,7 +75,7 @@ registerFirebase({
 
 The next step is to add `push.js` to your angular project assets in the `angular.json` file:
 
-```
+```typescript
     "polyfills": "src/polyfills.ts",
     "tsConfig": "tsconfig.app.json",
     "assets": [
@@ -93,7 +93,7 @@ And you are done with the service worker setup!!
 
 Now to the funny part, adding NgWebPush to you Angular app, to do so you need to import `NgWebPushModule` in you `AppModule`:
 
-```
+```typescript
 ...
 import { NgWebPushModule } from 'ng-webpush';
 ...
@@ -124,7 +124,7 @@ export class AppModule { }
 
 And finally in your `AppComponent` (or any other component in your app) you inject the `NgWebPushService`:
 
-```
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { NgWebPushService } from 'ng-webpush';
 
@@ -148,7 +148,7 @@ The `NgWebPusService` provides two observables wich will emit:
 
 - Notifications received
 
-```
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { NgWebPushService } from 'ng-webpush';
 
@@ -182,7 +182,7 @@ In order to test the app you cannot simply use `ng serve` since you need to gene
 
 Then for the sake of simplicity you can edit your `package.json` and add the following scripts replacing `{name of your project}` with the actual name of your Angular project
 
-```
+```typescript
 "scripts": {
     "ng": "ng",
     "start": "ng serve",
