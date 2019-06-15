@@ -225,10 +225,3 @@ curl -X POST \
 ```
 
 Enjoy!
-
-
-
-
-
-
-

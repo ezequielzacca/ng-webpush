@@ -1,4 +1,4 @@
-# NgWebPush
+﻿# NgWebPush
 
 Handle FCM push notifications like a champ with ng-webpush
 
@@ -225,11 +225,3 @@ curl -X POST \
 ```
 
 Enjoy!
-
-
-
-
-
-
-
-
