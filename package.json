@@ -1,6 +1,6 @@
 {
   "name": "pwa-web-push",
-  "version": "0.0.0",
+  "version": "0.0.10",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
